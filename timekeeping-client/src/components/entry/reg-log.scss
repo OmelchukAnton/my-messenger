@@ -1,0 +1,129 @@
+.head {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    display: flex;
+
+    .head {
+        // display: flex;
+        // justify-content: space-between;
+
+        // .author-form {
+        //     input, button {
+        //         margin-left: 10px;
+        //     }
+        // }
+    }
+
+    .logo {
+        padding: 30px;
+        // background-color: inherit;
+        // float: left;
+        // border: none;
+        // outline: none;
+        // cursor: pointer;
+        // padding: 14px 16px;
+        // transition: 0.3s;
+
+    }
+
+    .tablinks:hover {
+        background-color: #ddd;
+    }
+
+    .tablinks:active {
+        background-color: #ccc;
+    }
+
+    .tabcontent {
+        display: none;
+        padding: 6px 12px;
+        border: 1px solid #ccc;
+        border-top: none;
+    }
+}
+.begin {
+    height: 70%;
+    // border: 1px dotted grey;
+
+    .reg-info {
+        // border: 1px dotted grey;
+        text-align: center;
+
+        p {
+            font-size: 19px;
+        }
+    }
+
+    .button-reg {
+        font-size: 20px;
+        color: white;
+        background-color: #00BE6E;
+    }
+    .button-close {
+        font-size: 14px;
+        color: white;
+        background-color: #00BE6E;
+        margin-bottom: 5px;
+    }
+
+    fieldset {
+        margin-top: 5px;
+        background-color: #FFFFDC;
+        color: black;
+        // background: silver;
+        // background-color: #F5683D;
+        // background-color: #01B8A4;
+        // background-color: #305075;
+    }
+
+    .reg-form {
+        text-align: center;
+        padding: 0 120px 0 120px;
+
+
+        input {
+            // border: none;
+            font-size: 15px;
+
+            &:focus {
+                background-color: #DFDFDF;
+            }
+        }
+        .reg-form-group {
+            margin-top: 10px;
+        }
+
+
+        .name {
+            margin-left: 50px;
+        }
+        .password {
+            margin-left: 53px;
+        }
+        .repeat-password {
+        }
+        .email {
+            margin-left: 76px;
+        }
+        .state {
+            margin: 10px 128px 0px 82px;
+        }
+        .reg-form-sex {
+            margin-right: 25px;
+            .sex-lab1 {
+                margin-left: 123px;
+                margin-top: 10px;
+            }
+            .sex-lab2 {
+                margin-left: 20px;
+            }
+        }
+        .reg-button {
+            margin-top: 20px;
+            background-color: #00BE6E;
+            color: white;
+            // margin-left: 57px;
+        }
+    }
+}

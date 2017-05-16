@@ -1,0 +1,12 @@
+{
+    "extends": "airbnb",
+    "globals": {
+        "document": true,
+        "fetch": true,
+        },
+    "rules": {
+      "linebreak-style": 0,
+      "import/extensions": [0, "always"],
+      "jsx-a11y/no-static-element-interactions": [0, "always"],
+    }
+}

@@ -1,0 +1,116 @@
+// .navigation-chats {
+//     font-size: 25px;
+//     display: flex;
+//     align-items: center;
+//
+//     background-color: #447ced;
+//     // background-color: #0F6FA9;
+//     height: 100px;
+//     color: white;
+//     height: 50px;
+//
+//     .navigation-rightSide {
+//
+//
+//         .button-login {
+//           display: inline-block;
+//           border-radius: 5px;
+//           background-color: #f4511e;
+//           border: none;
+//           color: #FFFFFF;
+//           text-align: center;
+//           font-size: 20px;
+//           width: 140px;
+//           transition: all 0.5s;
+//           cursor: pointer;
+//         }
+//         .button-login span {
+//           cursor: pointer;
+//           display: inline-block;
+//           position: relative;
+//           transition: 0.5s;
+//         }
+//         .button-login span:after {
+//           content: '\00bb';
+//           position: absolute;
+//           opacity: 0;
+//           top: 0;
+//           right: -20px;
+//           transition: 0.5s;
+//         }
+//
+//         .button-login:hover span {
+//           padding-right: 25px;
+//         }
+//
+//         .button-login:hover span:after {
+//           opacity: 1;
+//           right: 0;
+//         }
+//     }
+// }
+
+.selectChat {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: #f47846;
+    height: 100px;
+    font-size: 20px;
+
+    .back {
+        margin-left: 30px;
+    }
+
+    .tick-user {
+        text-align: center;
+        flex-grow: 1;
+        margin-right: 30px;
+    }
+}
+
+
+
+.message-content {
+    background-color: #f5f5ff;
+    height: 77%;
+
+
+    .topPart {
+        display: flex;
+        border: 1px dotted grey;
+        height: 90%;
+
+        .firstUser {
+            width: 20%;
+            border: 1px dotted grey;
+
+        }
+
+        .dialog {
+            width: 80%;
+            justify-content: center;
+            border: 1px dotted grey;
+        }
+
+        .secondUser {
+            width: 20%;
+            justify-content: flex-end;
+            border: 1px dotted grey;
+        }
+    }
+
+    .bottomPart {
+        margin: 10px 0px 0px 20px;
+
+        .inputMessage {
+            height: 30px;
+            padding-left: 10px;
+            width: 90%;
+        }
+        .sendMessage {
+            height: 30px;
+        }
+    }
+}

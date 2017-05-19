@@ -1,0 +1,68 @@
+.head {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    display: flex;
+
+    .logo {
+        padding: 30px;
+    }
+
+    button {
+        margin: 20px;
+        width: 70px;
+        height: 40px;
+    }
+}
+.regContent {
+    .hReg {
+        text-align: center;
+    }
+    .buttonReg {
+        display: flex;
+        justify-content: center;
+    }
+    .reg-form {
+        display: flex;
+
+        .column1 {
+            margin: 0 18%;
+        }
+
+        .groups {
+
+            .inputGroupReg {
+                margin: 10px 0 10px 10px;
+                width: 300px;
+                height: 30px;
+            }
+        }
+    }
+
+}
+
+.author-form {
+    display: flex;
+    justify-content: flex-end;
+
+    .formLogin {
+        display: flex;
+
+        .buttonLog {
+            margin-left: 20px;
+            height: 50px;
+            border-radius: 50%;
+        }
+    }
+
+    .groups {
+        display: flex;
+        padding-bottom: 10px;
+        .loginEmail {
+            margin-left: 43px;
+        }
+        .loginPassword {
+            margin-left: 20px;
+        }
+    }
+}

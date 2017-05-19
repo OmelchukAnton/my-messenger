@@ -1,9 +1,6 @@
 import React from 'react';
 import Validation from 'react-validation';
 import validator from 'validator';
-// import Validation from './../../../node_modules/react-validation/lib/build/validation.js';
-// import { rules, Form, Input, Select, Textarea, Button } from
- // './../../../node_modules/react-validation/lib/build/validation.js';
 
 Object.assign(Validation.rules, {
 
@@ -14,7 +11,14 @@ Object.assign(Validation.rules, {
 
   email: {
     rule: value => validator.isEmail(value),
-    hint: value => <span className="form-error is-visible">{value} is not an Email.</span>,
+    hint: value => <span className="form-error is-visible"><br />{value} - is not an Email.</span>,
+  },
+  alpha: {
+    rule: value => validator.isAlpha(value),
+    hint: () =>
+      <span className="form-error is-visible">
+        <br /> String should contain only letters (a-z, A-Z).
+      </span>,
   },
 
   password: {
@@ -33,13 +37,13 @@ Object.assign(Validation.rules, {
 
       return password.value === passwordConfirm.value;
     },
-    hint: () => <span className="form-error is-visible">Passwords should be equal.</span>,
+    hint: () => <span className="form-error is-visible"> <br /> Passwords should be equal.</span>,
     api: {
       hint: value => (
         <button
           className="form-error is-visible"
         >
-          API Error on {value} value. Focus to hide.
+          <br /> API Error on {value} value. Focus to hide.
         </button>
       ),
     },

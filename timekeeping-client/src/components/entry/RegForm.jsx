@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
+import Login from './Login.jsx';
+import RegAcc from './RegAcc.jsx';
+import Valid from './Valid.jsx';
 
 export default class RegForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      // email: "",
       isLoggedIn: false,
     };
 
@@ -32,104 +34,55 @@ export default class RegForm extends Component {
     }
 
     return (
-      <div className="reg-info">
-        Are you in our first? <p> To create a new account, click </p>
-        {button}
-        <Greeting isLoggedIn={isLoggedIn} />
+      <div>
+        <div className="head">
+          <img
+            src="./avatars/logo.jpg"
+            width="30"
+            height="20"
+            alt="example-logo"
+            className="logo"
+          />
+          <a className="logo" href="/">timekeeping</a>
+          {button}
+
+        </div>
+        <div className="reg-info">
+          <Greeting isLoggedIn={isLoggedIn} />
+        </div>
       </div>
     );
   }
 }
 
-function UserGreeting() {
-  return (
-    <form className="reg-form">
-      <a>It is necessary to fill in blank fields </a>
-      <fieldset>
-
-        <div className="reg-form-group">
-          <label htmlFor="email">Email:</label>
-          <input
-            className="email"
-            type="email"
-            required
-            placeholder="example@example.com"
-            // value={this.state.email}
-            // onChange={() => { console.log(1)}}
-          />
-        </div>
-
-        <div className="reg-form-group">
-          <label htmlFor="name">Username:</label>
-          <input className="name" type="text" placeholder="Username" />
-        </div>
-
-        <div className="reg-form-group">
-          <label htmlFor="password">Password:</label>
-          <input
-            className="password"
-            type="password"
-            placeholder="A-z, 1-9"
-            // value={this.state.password}
-          />
-        </div>
-
-        <div className="reg-form-group">
-          <label htmlFor="repeat-password"> Repeat password: </label>
-          <input className="repeat-password" type="password" placeholder="Enter the password" />
-        </div>
-
-        <div className="reg-form-sex">
-          <label htmlFor="sex">I am:</label>
-          <input type="radio" name="dva" className="sex-lab1" />
-          <label htmlFor="dva1">Male</label>
-          <input type="radio" name="dva" className="sex-lab2" />
-          <label htmlFor="dva2">Female</label>
-        </div>
-
-        <div className="reg-form-option">
-          <label htmlFor="state">State:</label>
-          <select className="state">
-            <option>Belarus</option>
-            <option>Russia</option>
-            <option>Other..</option>
-          </select>
-        </div>
-        {/* <button type="submit" className="reg-button">
-          Create an account.
-        </button> */}
-        <form action="/pm">
-          <button className="reg-button">Create an account.</button>
-        </form>
-      </fieldset>
-    </form>
-  );
+function OpenRegAccount() {
+  return <RegAcc />;
 }
 
-function GuestGreeting() {
-  return <h1>Please sign up.</h1>;
+function OpenLoginForm() {
+  return <Login />;
 }
 
 function Greeting(props) {
   const isLoggedIn = props.isLoggedIn;
   if (isLoggedIn) {
-    return <UserGreeting />;
+    return <OpenRegAccount />;
   }
-  return <GuestGreeting />;
+  return <OpenLoginForm />;
 }
 
 function LoginButton(props) {
   return (
     <button className="button-reg" onClick={props.onClick}>
-      REGISTRATION!
+      Sign up!
     </button>
   );
 }
 
 function LogoutButton(props) {
   return (
-    <button className="button-close" onClick={props.onClick}>
-      Close up
+    <button className="button-log" onClick={props.onClick}>
+      Sign in!
     </button>
   );
 }
